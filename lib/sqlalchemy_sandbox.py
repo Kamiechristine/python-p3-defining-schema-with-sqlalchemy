@@ -6,7 +6,10 @@ from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
 
 class Student(Base):
-    pass
+    __tablename__ = 'students'
+    
+    id = Column(Integer, primary_key=True)
+    name = Column(String)  # Example of an additional column
 
 if __name__ == '__main__':
     pass
